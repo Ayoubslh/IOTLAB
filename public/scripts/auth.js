@@ -1,5 +1,4 @@
 // auth.js - Updated version
-const API_BASE = 'http://localhost:5000/auth';
 
 // Store token in cookies
 function setAuthToken(token) {
@@ -8,7 +7,7 @@ function setAuthToken(token) {
 
 async function checkAuth() {
     try {
-        const res = await fetch(`${API_BASE}/check-auth`, {
+        const res = await fetch(`auth/check-auth`, {
             credentials: 'include'
         });
 
